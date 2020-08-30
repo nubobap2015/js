@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Домашнее задание №1</title>
+</head>
+<body>
+<h1> Задание 1 </h1>
+Введите температуру в градусах цельсия
+<br> <input id="aTc" type="number" value="25">
+<input type="button" value="Посчитать" onclick="getinFn()">
+<hr>
+<h1> Задание 2 </h1>
+<input type="button" value="Делать и записать в консоль" onclick="ex2()">
+<hr>
+<h1> Задание 3 </h1>
+10 + 10 + "10" <input type="text" id="id1"> Сложение 10 и 10, потом автоприведение типов и конкантенация строки 20 и 10.
+Строка<br>
+10 + "10" + 10 <input type="text" id="id2"> Конкантенация 10(автоприведение к строке) и строки 10 и еще одна конк.
+автоприведенного числа к строке "10". Строка<br>
+10 + 10 + +"10" <input type="text" id="id3">Сложение, потом мне не понятно как, но итог последняя строка преобразовалась
+в число. Число<br>
+10 / -"" <input type="text" id="id4">Число поделить на минус 0 = -бесконечность. Число<br>
+10 / +"2,5" <input type="text" id="id5"> Число поделить на строку получится ошибка в вычислениях. Ошибка(Nan)
+<hr>
+<h1> Задание 4 </h1>
+let mode = "normal"; - Корректно
+<br>let my_valu3 = 102; - Корректно
+<br>let 3my_value3 = "102"; - Не корректно
+<br>let __hello__ = "world"; - Корректно
+<br>let $$$ = "money"; - Корректно
+<br>let !0_world = true; - Не корректно
+<script>
+    document.getElementById("id1").value = 10 + 10 + "10";
+    document.getElementById("id2").value = 10 + "10" + 10;
+    document.getElementById("id3").value = 10 + 10 + +"10";
+    document.getElementById("id4").value = 10 / -"";
+    document.getElementById("id5").value = 10 / +"2,5";
+    console.log(10 + 10 + "10");
+    console.log(10 + "10" + 10);
+    console.log(10 + 10 + +"10");
+    console.log(10 / -"");
+    console.log(10 / +"2,5");
+</script>
+<script>
+    function getinFn() {
+        let aTc = document.getElementById("aTc").value;
+        let aTf = aTc * 9 / 5 + 32;
+        alert("А в фаренгейтах-то это аж " + aTf + " градусов... Фанренгейта");
+    }
+
+    function ex2() {
+        let admin;
+        let name = 'Василий';
+        admin = name;
+        console.log(admin);
+    }
+</script>
+</body>
+</html>
